@@ -1,7 +1,7 @@
 class Lttoolbox < Formula
   desc "Finite state compiler, processor and helper tools used by apertium"
   homepage "https://wiki.apertium.org/wiki/Lttoolbox"
-  url "https://apertium.projectjj.com/apt/nightly/source/lttoolbox/lttoolbox_3.8.0+g641.648471e4.orig.tar.bz2"
+  url "https://apertium.projectjj.com/apt/nightly/source/lttoolbox/lttoolbox_lttoolbox_3.8.0+g641~648471e4.orig.tar.bz2"
   version "3.8.0+g641-648471e4"
   sha256 "ab3528c7ed2348d8baaaef3e1d5bf148bacb3143d52bc6e676a17b6c7a9d6aa1"  
   license "GPL-2.0-or-later"
