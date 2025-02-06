@@ -22,12 +22,12 @@ class Lttoolbox < Formula
 
   def install
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "../lttoolbox-3.8.0+g641~648471e4", *std_cmake_args
       system "make"
       system "ctest"
       system "make", "install"
     end
-  end
+  end  
 
   test do
     system "true"
