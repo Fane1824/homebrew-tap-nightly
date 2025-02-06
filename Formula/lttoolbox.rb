@@ -21,7 +21,7 @@ class Lttoolbox < Formula
   depends_on "python3"
 
   def install
-    system "tar", "-xvf", Dir.glob("lttoolbox_*.tar.bz2").first
+    system "tar", "-xvf", Dir.glob("#{cached_download}").first
     extracted_dir = Dir.glob("lttoolbox-*").first
   
     mkdir "build" do
