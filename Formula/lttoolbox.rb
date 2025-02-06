@@ -15,19 +15,24 @@ class Lttoolbox < Formula
     depends_on "python3"
   
     def install
-        system "tar", "-xvf", cached_download
-        extracted_dir = Dir.glob("lttoolbox-*/").first.chomp("/")
-        odie "Source directory not found" unless extracted_dir
-        
+        # Extract tarball (tar will auto-create directory)
+        system "tar", "-xjf", cached_download
+    
+        # The tarball extracts into a directory like: lttoolbox-3.8.0+g641~648471e4.orig/
+        extracted_dir = Dir.glob("lttoolbox-*.orig").first
+        odie "Could not find source directory" unless extracted_dir
+    
         mkdir "build" do
+          # Point CMake to the extracted directory containing CMakeLists.txt
           system "cmake", "../#{extracted_dir}", *std_cmake_args
           system "make"
           system "ctest"
           system "make", "install"
         end
-      end
-  
-    test do
-      system "true"
     end
-  end
+    
+    test do
+        system "#{bin}/lt-comp", "--help"
+    end
+
+end
