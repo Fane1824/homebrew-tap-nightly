@@ -17,9 +17,11 @@ class Lttoolbox < Formula
     def install
       system "tar", "-xvf", Dir.glob("#{cached_download}").first
       extracted_dir = Dir.glob("lttoolbox-*.orig").first
-    
+      source_subdir = Dir.glob("#{extracted_dir}/*/").first
+      odie "Source subdirectory not found" unless source_subdir
+  
       mkdir "build" do
-        system "cmake", "../#{extracted_dir}", *std_cmake_args
+        system "cmake", source_subdir, *std_cmake_args
         system "make"
         system "ctest"
         system "make", "install"
