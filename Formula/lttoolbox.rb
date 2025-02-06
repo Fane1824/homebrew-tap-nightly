@@ -15,19 +15,17 @@ class Lttoolbox < Formula
     depends_on "python3"
   
     def install
-      system "tar", "-xvf", Dir.glob("#{cached_download}").first
-      extracted_dir = Dir.glob("lttoolbox-*.orig").first
-      # Rename the extracted directory to remove .orig suffix
-      target_dir = extracted_dir.sub(/\.orig$/, "")
-      FileUtils.mv extracted_dir, target_dir
-  
-      mkdir "build" do
-        system "cmake", "../#{target_dir}", *std_cmake_args
-        system "make"
-        system "ctest"
-        system "make", "install"
+        system "tar", "-xvf", cached_download
+        extracted_dir = Dir.glob("lttoolbox-*/").first.chomp("/")
+        odie "Source directory not found" unless extracted_dir
+        
+        mkdir "build" do
+          system "cmake", "../#{extracted_dir}", *std_cmake_args
+          system "make"
+          system "ctest"
+          system "make", "install"
+        end
       end
-    end
   
     test do
       system "true"
