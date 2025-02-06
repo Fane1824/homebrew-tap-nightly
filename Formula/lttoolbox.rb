@@ -21,13 +21,17 @@ class Lttoolbox < Formula
   depends_on "python3"
 
   def install
+    system "tar", "-xvf", Dir.glob("lttoolbox_*.tar.bz2").first
+    extracted_dir = Dir.glob("lttoolbox-*").first 
+  
     mkdir "build" do
-      system "cmake", "../lttoolbox-3.8.0+g641~648471e4", *std_cmake_args
+      system "cmake", "../#{extracted_dir}", *std_cmake_args
       system "make"
       system "ctest"
       system "make", "install"
     end
-  end  
+  end
+  
 
   test do
     system "true"
