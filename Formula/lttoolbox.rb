@@ -22,7 +22,7 @@ class Lttoolbox < Formula
 
   def install
     system "tar", "-xvf", Dir.glob("lttoolbox_*.tar.bz2").first
-    extracted_dir = Dir.glob("lttoolbox-*").first 
+    extracted_dir = Dir.glob("lttoolbox-*").first
   
     mkdir "build" do
       system "cmake", "../#{extracted_dir}", *std_cmake_args
