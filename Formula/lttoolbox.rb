@@ -8,12 +8,6 @@ class Lttoolbox < Formula
   
     head "https://github.com/apertium/lttoolbox.git", branch: "main"
   
-    # bottle do
-    #   root_url "https://github.com/WolfPkg/homebrew-tap-nightly/releases/download/lttoolbox-3.7.6+g611-071c27e3"
-    #   sha256 cellar: :any,                 ventura:      "86539ff5591ce5b2d723c32dde299d354a6d48c32f7a6dd2c05aed5348a620b2"
-    #   sha256 cellar: :any_skip_relocation, x86_64_linux: "ed53da140e40b160013604dabf9303a660f529d2849d46c9e8a41d2c5dd8a82a"
-    # end
-  
     depends_on "cmake" => :build
     depends_on "pkg-config" => :build
     depends_on "swig" => :build
@@ -27,7 +21,7 @@ class Lttoolbox < Formula
     def install
       system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
       system "cmake", "--build", "build"
-      system "cmake", "--build", "build", "--target", "test"
+      system "ctest", "--test-dir", "build", "--output-on-failure"
       system "cmake", "--build", "build", "--target", "install"
     end
   
