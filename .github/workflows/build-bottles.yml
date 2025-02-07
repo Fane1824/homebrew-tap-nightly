@@ -7,7 +7,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest]  
+        os: [ubuntu-latest] 
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -26,6 +26,9 @@ jobs:
         run: |
           brew install --build-bottle fane1824/tap-nightly/lttoolbox
           brew bottle --verbose --json fane1824/tap-nightly/lttoolbox
+
+      - name: List Files (Debugging)
+        run: ls -lah
 
       - name: Upload Bottles
         uses: actions/upload-artifact@v4
