@@ -8,6 +8,11 @@ class Lttoolbox < Formula
   
     head "https://github.com/apertium/lttoolbox.git", branch: "main"
     
+    bottle do
+        root_url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox"
+        sha256 cellar: :any, arm64_sequoia: "53fafc0b3cb09f5d24af719524658fae1514517fde111f5f2f69b2558311118e"
+      end
+      
     depends_on "cmake" => :build
     depends_on "pkg-config" => :build
     depends_on "swig" => :build
