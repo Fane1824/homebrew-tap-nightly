@@ -7,7 +7,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [macos-12, ubuntu-latest]  # macOS 12 = Intel Ventura, Ubuntu for Linux
+        os: [macos-11, ubuntu-latest]  # macOS 12 = Intel Ventura, Ubuntu for Linux
     runs-on: ${{ matrix.os }}
 
     steps:
