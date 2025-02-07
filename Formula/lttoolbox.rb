@@ -9,7 +9,7 @@ class Lttoolbox < Formula
     head "https://github.com/apertium/lttoolbox.git", branch: "main"
 
     bottle do
-        root_url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox"
+        root_url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox/"
         sha256 cellar: :any, arm64_sequoia: "7b99f4a8f82f1581ce3f79b40df14080632317e92dbdaebe0a08f5f27fbab9e6"
         sha256 cellar: :any_skip_relocation, x86_64_linux: "006977635b226aa71347ab994fecd50025afc3e66bb4627741006629e6e2cccb"
     end
