@@ -13,6 +13,7 @@ class Lttoolbox < Formula
     depends_on "icu4c"
     depends_on "libxml2"
     depends_on "python3"
+    depends_on "utfcpp"
   
     def install
       mkdir "build" do
