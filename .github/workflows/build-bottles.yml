@@ -17,7 +17,7 @@ jobs:
       - name: Install Homebrew
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          echo "/home/linuxbrew/.linuxbrew/bin" >> $GITHUB_PATH
+          echo "/home/linuxbrew/.linuxbrew/bin" >> "$GITHUB_PATH"
 
       - name: Tap the Repository
         run: brew tap fane1824/tap-nightly
@@ -25,15 +25,15 @@ jobs:
       - name: Install and Build Bottle
         run: |
           brew install --build-bottle fane1824/tap-nightly/lttoolbox
-          brew bottle --root-url="https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox" --json fane1824/tap-nightly/lttoolbox
-          mkdir bottles
-          mv *.bottle.tar.gz bottles/
+          brew bottle --root-url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox" --json fane1824/tap-nightly/lttoolbox
+          mkdir -p bottles
+          mv ./*.bottle.tar.gz bottles/
 
       - name: List Files (Debugging)
-        run: ls -lah
+        run: ls -lah bottles
 
       - name: Upload Bottles
         uses: actions/upload-artifact@v4
         with:
           name: bottles
-          path: "*.bottle.tar.gz"
+          path: "bottles/*.bottle.tar.gz"
