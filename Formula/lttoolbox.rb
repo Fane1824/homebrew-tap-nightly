@@ -7,7 +7,12 @@ class Lttoolbox < Formula
     license "GPL-2.0-or-later"
   
     head "https://github.com/apertium/lttoolbox.git", branch: "main"
-  
+
+    bottle do
+        root_url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox-3.8.0+g641-648471e4"
+        sha256 cellar: :any, arm64_sequoia: "64e242fc034396fd98fd2d48374a89b57e3dc04f8f70bba20c4c30e5a2077c92"
+      end      
+    
     depends_on "cmake" => :build
     depends_on "pkg-config" => :build
     depends_on "swig" => :build
