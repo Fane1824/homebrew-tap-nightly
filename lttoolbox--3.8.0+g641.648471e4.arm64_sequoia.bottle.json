@@ -1,0 +1,209 @@
+{
+  "fane1824/tap-nightly/lttoolbox": {
+    "formula": {
+      "name": "lttoolbox",
+      "pkg_version": "3.8.0+g641.648471e4",
+      "path": "Library/Taps/fane1824/homebrew-tap-nightly/Formula/lttoolbox.rb",
+      "tap_git_path": "Formula/lttoolbox.rb",
+      "tap_git_revision": "a433bf782de3b58eed61715cd0b3921c64f8b106",
+      "tap_git_remote": "https://github.com/Fane1824/homebrew-tap-nightly",
+      "desc": "Finite state compiler, processor and helper tools used by apertium",
+      "license": "GPL-2.0-or-later",
+      "homepage": "https://wiki.apertium.org/wiki/Lttoolbox"
+    },
+    "bottle": {
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "cellar": "any",
+      "rebuild": 1,
+      "date": "2025-02-07T17:55:16Z",
+      "tags": {
+        "arm64_sequoia": {
+          "filename": "lttoolbox-3.8.0%2Bg641.648471e4.arm64_sequoia.bottle.1.tar.gz",
+          "local_filename": "lttoolbox--3.8.0+g641.648471e4.arm64_sequoia.bottle.1.tar.gz",
+          "sha256": "7b99f4a8f82f1581ce3f79b40df14080632317e92dbdaebe0a08f5f27fbab9e6",
+          "tab": {
+            "homebrew_version": "4.4.20-86-g94e2bdf",
+            "changed_files": [
+              "INSTALL_RECEIPT.json",
+              "lib/pkgconfig/lttoolbox.pc"
+            ],
+            "source_modified_time": 1734649128,
+            "compiler": "clang",
+            "runtime_dependencies": [
+              {
+                "full_name": "icu4c@76",
+                "version": "76.1",
+                "revision": 1,
+                "pkg_version": "76.1_1",
+                "declared_directly": false
+              },
+              {
+                "full_name": "readline",
+                "version": "8.2.13",
+                "revision": 0,
+                "pkg_version": "8.2.13",
+                "declared_directly": false
+              },
+              {
+                "full_name": "libxml2",
+                "version": "2.13.5",
+                "revision": 0,
+                "pkg_version": "2.13.5",
+                "declared_directly": true
+              },
+              {
+                "full_name": "mpdecimal",
+                "version": "4.0.0",
+                "revision": 0,
+                "pkg_version": "4.0.0",
+                "declared_directly": false
+              },
+              {
+                "full_name": "ca-certificates",
+                "version": "2024-12-31",
+                "revision": 0,
+                "pkg_version": "2024-12-31",
+                "declared_directly": false
+              },
+              {
+                "full_name": "openssl@3",
+                "version": "3.4.0",
+                "revision": 0,
+                "pkg_version": "3.4.0",
+                "declared_directly": false
+              },
+              {
+                "full_name": "sqlite",
+                "version": "3.48.0",
+                "revision": 0,
+                "pkg_version": "3.48.0",
+                "declared_directly": false
+              },
+              {
+                "full_name": "xz",
+                "version": "5.6.4",
+                "revision": 0,
+                "pkg_version": "5.6.4",
+                "declared_directly": false
+              },
+              {
+                "full_name": "python@3.13",
+                "version": "3.13.2",
+                "revision": 0,
+                "pkg_version": "3.13.2",
+                "declared_directly": false
+              }
+            ],
+            "arch": "arm64",
+            "built_on": {
+              "os": "Macintosh",
+              "os_version": "macOS 15",
+              "cpu_family": "arm_blizzard_avalanche",
+              "xcode": "16.2",
+              "clt": "16.2.0.0.1.1733547573",
+              "preferred_perl": "5.34"
+            }
+          },
+          "path_exec_files": [
+            "bin/lt-expand",
+            "bin/lt-merge",
+            "bin/lt-trim",
+            "bin/lt-invert",
+            "bin/lt-paradigm",
+            "bin/lt-tmxcomp",
+            "bin/lt-tmxproc",
+            "bin/lt-append",
+            "bin/lt-print",
+            "bin/lt-apply-acx",
+            "bin/lt-restrict",
+            "bin/lt-proc",
+            "bin/lsx-comp",
+            "bin/lt-compose",
+            "bin/lt-comp"
+          ],
+          "all_files": [
+            ".brew/lttoolbox.rb",
+            "AUTHORS",
+            "COPYING",
+            "INSTALL_RECEIPT.json",
+            "README.md",
+            "bin/lsx-comp",
+            "bin/lt-append",
+            "bin/lt-apply-acx",
+            "bin/lt-comp",
+            "bin/lt-compose",
+            "bin/lt-expand",
+            "bin/lt-invert",
+            "bin/lt-merge",
+            "bin/lt-paradigm",
+            "bin/lt-print",
+            "bin/lt-proc",
+            "bin/lt-restrict",
+            "bin/lt-tmxcomp",
+            "bin/lt-tmxproc",
+            "bin/lt-trim",
+            "include/lttoolbox/acx.h",
+            "include/lttoolbox/alphabet.h",
+            "include/lttoolbox/att_compiler.h",
+            "include/lttoolbox/buffer.h",
+            "include/lttoolbox/cli.h",
+            "include/lttoolbox/compiler.h",
+            "include/lttoolbox/compression.h",
+            "include/lttoolbox/deserialiser.h",
+            "include/lttoolbox/entry_token.h",
+            "include/lttoolbox/exception.h",
+            "include/lttoolbox/expander.h",
+            "include/lttoolbox/file_utils.h",
+            "include/lttoolbox/fst_processor.h",
+            "include/lttoolbox/input_file.h",
+            "include/lttoolbox/lt_locale.h",
+            "include/lttoolbox/match_exe.h",
+            "include/lttoolbox/match_node.h",
+            "include/lttoolbox/match_state.h",
+            "include/lttoolbox/my_stdio.h",
+            "include/lttoolbox/node.h",
+            "include/lttoolbox/pattern_list.h",
+            "include/lttoolbox/regexp_compiler.h",
+            "include/lttoolbox/serialiser.h",
+            "include/lttoolbox/sorted_vector.h",
+            "include/lttoolbox/sorted_vector.hpp",
+            "include/lttoolbox/state.h",
+            "include/lttoolbox/stream_reader.h",
+            "include/lttoolbox/string_utils.h",
+            "include/lttoolbox/symbol_iter.h",
+            "include/lttoolbox/tmx_compiler.h",
+            "include/lttoolbox/trans_exe.h",
+            "include/lttoolbox/transducer.h",
+            "include/lttoolbox/ustring.h",
+            "include/lttoolbox/xml_parse_util.h",
+            "include/lttoolbox/xml_walk_util.h",
+            "lib/liblttoolbox.3.0.0.dylib",
+            "lib/liblttoolbox.3.dylib",
+            "lib/liblttoolbox.dylib",
+            "lib/pkgconfig/lttoolbox.pc",
+            "sbom.spdx.json",
+            "share/lttoolbox/acx.rng",
+            "share/lttoolbox/acx.xsd",
+            "share/lttoolbox/dix.dtd",
+            "share/lttoolbox/dix.rnc",
+            "share/lttoolbox/dix.rng",
+            "share/lttoolbox/dix.xsd",
+            "share/man/man1/lsx-comp.1",
+            "share/man/man1/lt-append.1",
+            "share/man/man1/lt-comp.1",
+            "share/man/man1/lt-compose.1",
+            "share/man/man1/lt-expand.1",
+            "share/man/man1/lt-merge.1",
+            "share/man/man1/lt-paradigm.1",
+            "share/man/man1/lt-print.1",
+            "share/man/man1/lt-proc.1",
+            "share/man/man1/lt-tmxcomp.1",
+            "share/man/man1/lt-tmxproc.1",
+            "share/man/man1/lt-trim.1"
+          ],
+          "installed_size": 1681583
+        }
+      }
+    }
+  }
+}

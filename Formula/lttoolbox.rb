@@ -10,8 +10,8 @@ class Lttoolbox < Formula
 
     bottle do
         root_url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox-3.8.0+g641-648471e4"
-        sha256 cellar: :any, arm64_sequoia: "64e242fc034396fd98fd2d48374a89b57e3dc04f8f70bba20c4c30e5a2077c92"
-        sha256 cellar: :any_skip_relocation, x86_64_linux: "d1366abbcf25cbf56f478e4574ad90d669e6dd15255360699f7a554cdb573419"
+        sha256 cellar: :any, arm64_sequoia: "7b99f4a8f82f1581ce3f79b40df14080632317e92dbdaebe0a08f5f27fbab9e6"
+        sha256 cellar: :any_skip_relocation, x86_64_linux: "006977635b226aa71347ab994fecd50025afc3e66bb4627741006629e6e2cccb"
     end      
     
     depends_on "cmake" => :build
