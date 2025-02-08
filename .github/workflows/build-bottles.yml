@@ -25,9 +25,9 @@ jobs:
       - name: Install and Build Bottle
         run: |
           brew install --build-bottle fane1824/tap-nightly/lttoolbox
-          brew bottle --root-url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox" --json fane1824/tap-nightly/lttoolbox
+          brew bottle --root-url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/lttoolbox" fane1824/tap-nightly/lttoolbox
           mkdir -p bottles
-          mv ./*.bottle.tar.gz bottles/
+          mv ./*.bottle.* bottles/
 
       - name: List Files (Debugging)
         run: ls -lah bottles
