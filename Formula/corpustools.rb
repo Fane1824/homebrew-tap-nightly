@@ -11,7 +11,7 @@ class Corpustools < Formula
   bottle do
     root_url "https://github.com/Fane1824/homebrew-tap-nightly/releases/download/corpustools"
     sha256 cellar: :any, arm64_sequoia: "103f05a4f72ddba7051d691df31f340a609e8985ba1cb532b24b1a59dd078d17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1c53a5b5b3ea22b2551bd203a23ecaff2a4ed829031d049a67e80acdc9f872c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e431574bf0e5fef14ea9fabe6cfe59ce1ecb58427997b6a9b332efd23c2327ac"
   end
 
   depends_on "python@3.11"
