@@ -11,7 +11,7 @@ class Corpustools < Formula
     depends_on "pkg-config"
   
     def install
-      system "poetry", "install", "--no-root", "--no-dev"
+      system "poetry", "install", "--no-root"
       bin.install Dir["bin/*"]
     end
   
