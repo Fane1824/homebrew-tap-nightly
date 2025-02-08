@@ -1,4 +1,4 @@
-class corpustools < Formula
+class Corpustools < Formula
     desc "Divvun tools to manipulate a corpus in different ways"
     homepage "https://github.com/divvun/CorpusTools"
     url "https://apertium.projectjj.com/apt/nightly/source/divvun-corpustools/divvun-corpustools_1.3.0+g2607~6ebd9938.orig.tar.bz2" 
